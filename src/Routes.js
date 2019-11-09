@@ -12,7 +12,6 @@ import ProductPage from './components/ProductPage/ProductPage';
 class Routes extends React.Component {
   render() {
     const allGoods = this.props.allGoods;
-
     return (
       <Router>
         <NavBar />

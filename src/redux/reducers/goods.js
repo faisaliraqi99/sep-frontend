@@ -8,8 +8,7 @@ const initialState = {
       price: 100,
       category: 'SHYRDAK'
     }
-  ],
-  current: 'SUPERUNIQID'
+  ]
 }
 
 export default (state = initialState, action) => {
