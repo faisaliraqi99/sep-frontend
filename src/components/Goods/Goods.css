@@ -1,0 +1,32 @@
+.goods-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 57%;
+}
+
+.good {
+    display: flex;
+    border: 1px solid black;
+    width: 200px;
+    margin: 0px 0 40px 0;
+    height: 200px;
+    color: #fff;
+    background-color: rgba(0,0,0, .2);
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./img/shyrdak.jpeg);
+}
+
+.item-goods, .item-price{
+    z-index: 1;
+}
+
+.item-img-darkness {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #00000094;
+}
