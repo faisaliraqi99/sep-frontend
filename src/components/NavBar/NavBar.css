@@ -1,4 +1,17 @@
 .nav{
   text-align: center;
-  
+  margin: 40px;
+  padding: 10px;
+}
+.navNav{
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-evenly;
+}
+.navImg{
+  background-image: url('./img/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 90px;
 }

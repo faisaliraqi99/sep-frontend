@@ -31,7 +31,7 @@ class CategoryList extends Component {
             }
           })}
         </div>
-        <div className="sunduki">
+        <div className="sunduki" onClick={() => this.handleClick()}>
           Сундуки
         </div>
       </div>
