@@ -11,6 +11,7 @@ class Home extends Component {
         <div className="container">
           HOME
           <CategoryList />
+          У нас вы получите
         </div>
       </div>
     );
