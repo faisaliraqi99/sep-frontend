@@ -11,8 +11,16 @@ class Home extends Component {
         <div className="container">
           HOME
           <CategoryList />
-          У нас вы получите
         </div>
+          <div className="footer">
+            <ul className="footDesc">У нас вы получите:</ul>
+              <li className="desc">Качественное обслуживание</li>
+              <li className="desc">Качественное обслуживание</li>
+              <li className="desc">Качественное обслуживание</li>
+              <li className="desc">Качественное обслуживание</li>
+              <li className="desc">Качественное обслуживание</li>
+              <li className="desc">Качественное обслуживание</li>
+          </div>
       </div>
     );
   }

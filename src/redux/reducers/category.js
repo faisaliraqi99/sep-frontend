@@ -7,6 +7,9 @@ const initialState = [
 
 export default (state = initialState, action) => {
   switch(action.type) {
-    default: return state;
+    case 'FETCH_CATEGORY_SUCCESS' :  return [
+      ...action.payload
+    ]
+    default: return state; 
   }
 }

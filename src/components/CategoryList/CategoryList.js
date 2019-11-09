@@ -2,18 +2,38 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './CategoryList.css';
+import { fetchCategory } from '../../redux/actions/category'
 
 class CategoryList extends Component {
+  componentDidMount() {
+    this.props.dispatch(fetchCategory())
+  }
+  
   handleClick = (cat) =>{
     console.log(cat)
   }
   
   render() {
+    console.log(this.props.categoryList)
+    
     return (
       <div className="category-list">
-        {this.props.categoryList.map((item, index) => (
-          <div key={index} onClick={() => this.handleClick(item.category)}>{item.categoryName}</div>
-        ))}
+        <div className="category-list-list">
+          {this.props.categoryList.map((item, index) => {
+            if (item.category !== "SUNDUK"){
+              return (
+                <div className="category-item" key={index} onClick={() => this.handleClick(item.category)}>
+                  {item.categoryName}
+                </div>
+              )
+            } else {
+              return null
+            }
+          })}
+        </div>
+        <div className="sunduki">
+          Сундуки
+        </div>
       </div>
     );
   }
