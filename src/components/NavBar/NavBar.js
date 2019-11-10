@@ -16,7 +16,7 @@ class NavBar extends React.Component {
     <div className="nav">
       <div className="navNav">
         <p>Собери свой</p> 
-        <div className="navImg" onClick={this.handleCLick}>
+        <div className="navImg" onClick={handleCLick}>
 
         </div>
         <p>Сеп сам</p>

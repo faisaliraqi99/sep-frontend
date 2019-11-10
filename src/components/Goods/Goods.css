@@ -18,6 +18,8 @@
     flex-direction: column;
     justify-content: center;
     background-image: url(./img/shyrdak.jpeg);
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .item-goods, .item-price{
@@ -29,4 +31,5 @@
     width: 200px;
     height: 200px;
     background: #00000094;
+    border-radius: 10px;
 }

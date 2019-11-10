@@ -13,7 +13,7 @@ class GoodsList extends Component {
     return (
       <>
         {goods.map(item => (
-          <div className="good" onClick={() => this.handleClick(item._id)} key={item._id}>
+          <div className="good" style={{backgroundImage: `url(http://localhost:8000/img/${item.img})`}} onClick={() => this.handleClick(item._id)} key={item._id}>
             <div className="item-img-darkness"></div>
             
             <h3 className="item-goods">
