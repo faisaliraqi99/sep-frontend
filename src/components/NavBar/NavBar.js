@@ -1,12 +1,11 @@
 import React from 'react';
-
+import { withRouter } from 'react-router-dom'
 import './NavBar.css'
  
 class NavBar extends React.Component {
   
   handleCLick = (item) => {
-    console.log(item)  
-    // this.props.history.push(`/order/${item}`)
+    this.props.history.push(`/order/${item}`)
   }
 
   render() {
@@ -14,18 +13,13 @@ class NavBar extends React.Component {
     return (
     <>
     <div className="nav">
-      <div className="navNav">
-        <p>Собери свой</p> 
-        <div className="navImg" onClick={this.handleCLick}>
-
-        </div>
-        <p>Сеп сам</p>
-      </div>
-      </div>
-    <div></div>
+        <span>Sep.kg</span>
+        <div className="navImg" onClick={handleCLick}/>
+        <span>Собери свой сеп</span>
+    </div>
     </>  
     );
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

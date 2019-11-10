@@ -12,14 +12,15 @@ class CategoryList extends Component {
   handleClick = (cat) =>{
     console.log(cat)
   }
-  
+ 
   render() {
-    console.log(this.props.categoryList)
+    const categoryList = this.props.categoryList;
+    
     
     return (
       <div className="category-list">
         <div className="category-list-list">
-          {this.props.categoryList.map((item, index) => {
+          {categoryList.map((item, index) => {
             if (item.category !== "SUNDUK"){
               return (
                 <div className="category-item" key={index} onClick={() => this.handleClick(item.category)}>
@@ -31,8 +32,8 @@ class CategoryList extends Component {
             }
           })}
         </div>
-        <div className="sunduki" onClick={() => this.handleClick()}>
-          Сундуки
+        <div className="sunduki"  onClick={() => this.handleClick("SUNDUK")}>
+         Сундуки
         </div>
       </div>
     );
