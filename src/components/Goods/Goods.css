@@ -1,7 +1,10 @@
+body {
+    background-color: whitesmoke;
+}
 .goods-list {
     display: flex;
     justify-content: space-between;
-    margin: 0px auto;
+    margin: 0 370px;
     text-align: center;
     flex-wrap: wrap;
     width: 57%;
@@ -11,7 +14,7 @@
     display: flex;
     border: 1px solid black;
     width: 200px;
-    margin: 0px 0 40px 0;
+    margin: 0 0 40px 0;
     height: 200px;
     color: #fff;
     background-color: rgba(0,0,0, .2);
@@ -33,4 +36,40 @@
     height: 200px;
     background: #00000094;
     border-radius: 10px;
+}
+
+.goods-sidebar .category-list-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.goods-sidebar {
+    position: absolute;
+    width: 20%;
+    text-align: center;
+}
+
+.goods-sidebar .category-item {
+    width: 65%;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+}
+
+.goods-sidebar .sunduki {
+    background: gray;
+    color: white;
+    margin: 0; 
+    padding: 20px;
+    width: 65%;
+    text-align: center;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    
+}
+
+.goods {
+    padding: 3rem;
 }

@@ -9,6 +9,7 @@ import './Goods.css';
 class Goods extends Component {
 
   render() {
+    
     return (
       <div className="goods">
         <div className="goods-sidebar">

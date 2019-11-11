@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 class GoodsList extends Component {
   handleClick = (id) => {
-    this.props.history(`/goods/${id}`)
+    this.props.history.push(`/goods/${id}`)
   }
   render() {
     const goods = this.props.goods;
