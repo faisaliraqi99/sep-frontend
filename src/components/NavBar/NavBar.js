@@ -13,10 +13,15 @@ class NavBar extends React.Component {
     return (
     <>
     <div className="nav">
-        <span>Sep.kg</span>
-        <div className="navImg" onClick={handleCLick}/>
-        <span>Собери свой сеп</span>
-    </div>
+      <div className="navNav">
+        <p>Собери свой</p> 
+        <div className="navImg" onClick={handleCLick}>
+
+        </div>
+        <p>Сеп сам</p>
+      </div>
+      </div>
+    <div></div>
     </>  
     );
   }

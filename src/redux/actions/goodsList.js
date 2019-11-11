@@ -13,3 +13,4 @@ export const fetchGoods = () => {
     dispatch(fetchGoodsSuccess(response.data))
   }
 }
+
