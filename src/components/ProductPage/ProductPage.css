@@ -1,0 +1,48 @@
+.title {
+    text-align: center; 
+}
+
+.productDesc {
+
+    text-align: left;
+    justify-content: space-around;
+    display: inline-grid;
+    margin: 7px 0px 63px 30px;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    margin: 1px 2rem 2rem 100px;
+}
+
+.productOpt {
+
+    text-align: right;
+    display: inline-grid;
+    margin: 7px 0px 63px 30px;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    margin: 1px 2rem 2rem 100px;
+
+}
+
+.prodImg {
+    text-align: center;
+    background-image: url('./img/sunduk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    display: table-row;
+}
+.productPrice {
+    text-align: center;
+}
+
+h2 {
+    display: inline-block
+}
+
+.productContent {
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -32,6 +32,7 @@ class Routes extends React.Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.goods.all)
   return {
     allGoods: state.goods.all
   }
