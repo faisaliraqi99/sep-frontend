@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const fetchCategorySuccess = (data) => {
-  console.log(data)
   return {
     type: 'FETCH_CATEGORY_SUCCESS',
     payload: data

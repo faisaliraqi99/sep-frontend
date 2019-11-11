@@ -9,7 +9,6 @@ import './Goods.css';
 class Goods extends Component {
 
   render() {
-    // console.log(this.props)
     return (
       <div className="goods">
         <div className="goods-sidebar">
