@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './CategoryList.css';
-import { fetchCategory } from '../../redux/actions/category'
+import { fetchCategory } from '../../redux/actions/category';
+import { fetchFilteredGoods } from '../../redux/actions/goodsList';
 
 class CategoryList extends Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class CategoryList extends Component {
   }
   
   handleClick = (cat) =>{
-    console.log(cat)
+    this.props.dispatch(fetchFilteredGoods(cat))
   }
  
   render() {
