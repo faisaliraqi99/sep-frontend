@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    padding: 2% 13%;
+    justify-content: space-between;
+    background: #00000070;
+    color: rgba(255, 255, 255, 0.945);
+}
+.desc1{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footerRight, .footerLeft{
+    width: 60%;
+}
+  
