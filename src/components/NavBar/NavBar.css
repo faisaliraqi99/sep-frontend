@@ -6,7 +6,7 @@
   align-items: center;
 }
 .navImg{
-  background-image: url(/static/media/chest.442af66c.png);
+  background-image: url(./img/chest.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 240px;
