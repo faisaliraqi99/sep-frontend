@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class GoodsList extends Component {
   handleClick = (id) => {
     // console.log(id)
-    this.props.history.push(`/goods/${id}`)
+    this.props.history(`/goods/${id}`)
   }
   render() {
     const goods = this.props.goods;
