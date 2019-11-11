@@ -20,22 +20,16 @@ class CategoryList extends Component {
     
     return (
       <div className="category-list">
-        <div className="category-list-list">
-          {categoryList.map((item, index) => {
-            if (item.category !== "SUNDUK"){
-              return (
+          {categoryList.map((item, index) => 
+            (
                 <div className="category-item" key={index} onClick={() => this.handleClick(item.category)}>
                   {item.categoryName}
                 </div>
-              )
-            } else {
-              return null
-            }
-          })}
-        </div>
-        <div className="sunduki"  onClick={() => this.handleClick("SUNDUK")}>
-         Сундуки
-        </div>
+            )
+          )}
+        {/* <div className="sunduki"  onClick={() => this.handleClick("SUNDUK")}> */}
+         {/* Сундуки */}
+        {/* </div> */}
       </div>
     );
   }

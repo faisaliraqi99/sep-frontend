@@ -1,13 +1,9 @@
-.category-list-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.category-list{
+  width: 20%;
 }
-
 .category-item {
   background: white;
   padding: 20px;
-  width: 25%;
   border: 1px solid #c7c7c7;
   border-radius: 10px;
   margin: 0 0 10px 0;
