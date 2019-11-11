@@ -1,44 +1,57 @@
 .title {
     text-align: center; 
+    background: #97949470;
 }
 
 .productDesc {
 
-    text-align: left;
-    justify-content: space-around;
+    padding: 3rem 116px;
+    text-align: center;
     display: inline-grid;
+    justify-content: space-around;
     margin: 7px 0px 63px 30px;
-    border: 1px solid #c7c7c7;
     border-radius: 8px;
     margin: 1px 2rem 2rem 100px;
+}
+
+.productDescText {
+    
+    margin: 14px 2rem 2rem 35px
+
+
 }
 
 .productOpt {
 
-    text-align: right;
+    text-align: center;
     display: inline-grid;
+    justify-content: space-around;
     margin: 7px 0px 63px 30px;
-    border: 1px solid #c7c7c7;
     border-radius: 8px;
     margin: 1px 2rem 2rem 100px;
 
 }
 
-.prodImg {
-    text-align: center;
-    background-image: url('./img/sunduk.jpg');
-    background-size: cover;
+.toChestBtn {
+    border: none;
+    /* background-image: url(/static/media/sunduk.b2b172a3.jpg); */
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 90px;
-    height: 90px;
-    display: table-row;
+    width: 15rem;
+    height: 2rem;
+    background-color: #c7c7c7
 }
-.productPrice {
-    text-align: center;
+.pronuctFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
-    display: inline-block
+    display: inline-block;
+    justify-content: center;
+    margin: 20px 40px 18px 30px;
+    
 }
 
 .productContent {
@@ -46,3 +59,8 @@ h2 {
     justify-content: space-between;
 }
 
+.button {
+    display: table;
+    background: none;
+    margin: -15px 30px 9px 24px;
+}
