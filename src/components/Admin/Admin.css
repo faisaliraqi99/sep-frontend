@@ -1,0 +1,13 @@
+.admin{
+  padding: 4rem;
+}
+.tableAdmin{
+  width: 100%;
+  border: 2px solid #c7c7c7;
+  border-collapse: collapse;
+}
+td{
+  border: 1px solid #c7c7c7;
+  height: 20px;
+  text-align: center;
+}

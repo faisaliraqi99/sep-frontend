@@ -17,12 +17,12 @@ class ProductPage extends Component {
               
                 <h1 className='title' > {data.name} </h1>
                 
-                <div className='productImg'/>
+                <div className='productImg' style={{backgroundImage: `url(http://localhost:3000/img/${data.img})`}}/>
                 
                 <div className='productContent'>
                     <div className='productDesc'>
+                        <div className='productTitle'></div>
                         <h2>  Описание  </h2>
-
                         <span className='productDescText'>
                             {data.description}
                         </span>
@@ -33,12 +33,11 @@ class ProductPage extends Component {
                         <span className='productOptText'>
                             {data.options}
                         </span>
+                        <div className="pronuctFooter">
+                            <span>{data.price}</span>
+                            <button className="toChestBtn" onClick={this.handleAdd}>добавить в сундук</button>
+                        </div>
                     </div>
-                </div>
-                
-                <div className='prodImg'>
-                    <button onClick={this.handleAdd}>Добавить в сундук</button>
-                    <h3 className='productPrice'>   {data.price}    </h3>
                 </div>
             </div>
         );

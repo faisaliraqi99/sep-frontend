@@ -8,6 +8,7 @@ import Goods from './components/Goods/Goods';
 import Admin from './components/Admin/Admin';
 import Order from './components/Order/Order';
 import ProductPage from './components/ProductPage/ProductPage';
+import Footer from './components/Footer/Footer';
 
 class Routes extends React.Component {
   render() {
@@ -15,17 +16,18 @@ class Routes extends React.Component {
     return (
       <Router>
         <NavBar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/admin" component={Admin} />
-        <Route exact path="/goods" component={Goods} />
-        <Route exact path="/order" component={Order} />
-        {allGoods.map(item => (
-          <Route key={item._id} exact path={`/goods/${item._id}`} >
-            <ProductPage
-              data={item}
-            />
-          </Route>
-        ))}
+          <Route exact path="/" component={Home} />
+          <Route exact path="/admin" component={Admin} />
+          <Route exact path="/goods" component={Goods} />
+          <Route exact path="/order" component={Order} />
+          {allGoods.map(item => (
+            <Route key={item._id} exact path={`/goods/${item._id}`} >
+              <ProductPage
+                data={item}
+              />
+            </Route>
+          ))}
+        <Footer/>
       </Router>
     )
   }
