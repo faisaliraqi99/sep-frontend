@@ -13,3 +13,10 @@ export const fetchGoods = () => {
     dispatch(fetchGoodsSuccess(response.data))
   }
 }
+
+export const fetchFilteredGoods = (cat) => {
+  return async dispatch => {
+    let response = await axios.get(`http://localhost:8000/find/category/${cat}`)
+    dispatch(fetchGoodsSuccess(response.data))
+  }
+}

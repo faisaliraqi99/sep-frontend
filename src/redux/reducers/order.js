@@ -14,7 +14,6 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-    console.log(action.payload)
     switch(action.type) {
         case "ADD_TO_ORDER":return action.payload
         default: return state;

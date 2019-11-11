@@ -1,17 +1,33 @@
 .nav{
   text-align: center;
-  margin: 40px;
-  padding: 10px;
-}
-.navNav{
+  padding: 2rem 6rem;
   display: flex;
-  flex-direction: initial;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background: #97949470;
+  color: black;
 }
 .navImg{
-  background-image: url('./img/1.jpg');
+  background-image: url(./img/chest.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 90px;
-  height: 90px;
+  width: 240px;
+  height: 120px;
+}
+.navImg1{
+  background-image:url('./img/yurta.png');
+  background-size: contain;
+  background-repeat:repeat-x;
+  width: 50px;
+  height: 50px;
+}
+.zag{
+  padding: 10px;
+  font-size: 40px;
+  color:rgba(206, 180, 33, 0.582);
+}
+.predl{
+  padding: 20px;
+  font-size: 40px;
+  color: rgba(206, 180, 33, 0.582);
 }
