@@ -4,14 +4,16 @@ import { withRouter } from 'react-router-dom';
 
 class GoodsList extends Component {
   handleClick = (id) => {
-    this.props.history(`/goods/${id}`)
+    this.props.history.push(`/goods/${id}`)
   }
   render() {
     const goods = this.props.goods;
     
     return (
       <>
-        {goods.map(item => (
+        {goods.map(item => {
+          console.log(item)
+          return (
           <div className="good" style={{backgroundImage: `url(http://localhost:8000/img/${item.img})`}} onClick={() => this.handleClick(item._id)} key={item._id}>
             <div className="item-img-darkness"></div>
             
@@ -23,7 +25,7 @@ class GoodsList extends Component {
               {item.price}
             </span>
           </div>
-        ))}
+        )})}
       </>
     );
   }
