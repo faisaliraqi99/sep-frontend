@@ -24,7 +24,7 @@ class GoodsList extends Component {
               </span>
             </div>
           </div>
-        )})}
+        ))}
       </>
     );
   }
