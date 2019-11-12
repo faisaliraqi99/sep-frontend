@@ -1,36 +1,80 @@
+body {
+    background-color: whitesmoke;
+}
 .goods-list {
     display: flex;
-    justify-content: space-between;
-    margin: 0px auto;
+    justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    width: 57%;
+    width: 80%;
+    padding: 10px 20px;
 }
 
 .good {
     display: flex;
     border: 1px solid black;
     width: 200px;
-    margin: 0px 0 40px 0;
-    height: 200px;
+    margin: 0 0 40px 0;
+    /* height: 200px; */
     color: #fff;
     background-color: rgba(0,0,0, .2);
     flex-direction: column;
     justify-content: center;
-    background-image: url(./img/shyrdak.jpeg);
+    align-items: center;
     cursor: pointer;
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.item-img {
+    width: 180px;
+    background-image: url(/static/media/shyrdak.c71ec315.jpeg);
+    height: 160px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .item-goods, .item-price{
     z-index: 1;
 }
 
-.item-img-darkness {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: #00000094;
+.goods-sidebar .category-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.goods-sidebar {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.goods-sidebar .category-item {
+    width: 65%;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+}
+
+.goods-sidebar .sunduki {
+    background: gray;
+    color: white;
+    margin: 0; 
+    padding: 20px;
+    width: 65%;
+    text-align: center;
+    border: 1px solid #c7c7c7;
     border-radius: 10px;
+    
+}
+
+.goods {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
