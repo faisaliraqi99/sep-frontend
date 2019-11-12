@@ -11,17 +11,18 @@ class GoodsList extends Component {
     
     return (
       <>
-        {goods.map(item => (
-          <div className="good" style={{backgroundImage: `url(http://localhost:8000/img/${item.img})`}} onClick={() => this.handleClick(item._id)} key={item._id}>
-            <div className="item-img-darkness"></div>
-            
-            <h3 className="item-goods">
-              {item.name}
-            </h3>
-            
-            <span className="item-price">
-              {item.price}
-            </span>
+        {goods.map((item, index) => (
+          <div className="good"  onClick={() => this.handleClick(item._id)} key={item._id}>
+            <img alt={"item-img" + index} className="item-img" src={`http://localhost:8000/img/${item.img}`}></img>
+            <div className="item-desc">
+              <h3 className="item-goods">
+                {item.name}
+              </h3>
+              
+              <span className="item-price">
+                {item.price}
+              </span>
+            </div>
           </div>
         ))}
       </>
