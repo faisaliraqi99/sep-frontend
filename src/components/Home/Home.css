@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .home .container{
   width: 100%;
   margin: 0;
@@ -10,4 +12,31 @@
   background: #97949470;
   min-height: 100vh;
   display: flex;
+}
+
+.preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../img/бозуй.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview-content {
+  width: 100%;
+  height: 100%;
+  background-color: #000000c2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vh;
+}
+
+.preview-disabled{
+  transition: 0.5s;
+  transform: translateY(-100%);
 }
