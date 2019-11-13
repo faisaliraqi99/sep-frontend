@@ -2,13 +2,13 @@ import { combineReducers } from 'redux';
 
 import goodsReducer from './goods';
 import orderReducer from './order';
-import ordersReduser from './orders'
 import categoryReducer from './category';
+import adminReducer from './admin';
 
 const rootReducer = combineReducers({
   goods: goodsReducer,
   order: orderReducer,
-  orders: ordersReduser,
+  orders: adminReducer,
   category: categoryReducer
 });
 

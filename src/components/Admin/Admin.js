@@ -1,43 +1,49 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../Admin/Admin.css'
+import { getOrders } from '../../redux/actions/admin';
 
 class Admin extends Component {
+  componentDidMount(){
+    this.props.dispatch(getOrders());
+  }
   render() {
     return (
       <div className="admin">
         <div className="container">
           <table className="tableAdmin">
-          <tr>
-              <th>Date</th>
-              <th>Status</th> 
+            <caption>Заказы</caption>
+            <tr> 
               <th>Name</th>
               <th>Phone Number</th>
-              <th>Address</th>
+              <th>Goods</th>
+              <th>price</th>
             </tr>
-            <tr>
-              <td>29.01.2019</td>
-              <td>accepted</td>
-              <td>Bek</td>
-              <td>0706201324</td>
-              <td>Ak-Orgo</td>
-            </tr> 
-            <tr>
-              <td>22.01.2019</td>
-              <td>not accepted</td>
-              <td>Samat</td>
-              <td>0706201323</td>
-              <td>Pishpek</td>
-            </tr>
-            <tr>
-              <td>21.01.2019</td>
-              <td>Done</td>
-              <td>Emir</td>
-              <td>0706201322</td>
-              <td>Alamedin</td>
-            </tr>
-            
-              
+            {this.props.orders.map((item)=>{
+              console.log(item)
+              return(
+                <>
+                <tr key={item}>
+                  <td>{item.name}</td>
+                  <td>{item.phone}</td>
+                  <td>
+
+                    <table>
+                      {item.goods.map((item)=>{
+                        return(
+                          <tr>
+                            <td>{item.name}</td>
+                            <td>{item.price}</td>
+                          </tr>
+                        )
+                      })}
+                    </table>
+                  </td>
+                </tr>
+              </>
+              )
+            })}
           </table>
         </div>
       </div>
@@ -45,4 +51,8 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+const mapStateToProps = (state)=>{
+  return state
+}
+
+export default connect(mapStateToProps)(Admin);
