@@ -15,7 +15,6 @@ body {
     border: 1px solid black;
     width: 200px;
     margin: 0 0 40px 0;
-    /* height: 200px; */
     color: #fff;
     background-color: rgba(0,0,0, .2);
     flex-direction: column;
@@ -77,4 +76,8 @@ body {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.item-desc {
+    text-align: center;
 }
