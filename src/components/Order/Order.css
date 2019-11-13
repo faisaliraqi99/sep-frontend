@@ -1,0 +1,41 @@
+.order{
+  min-height: 100vh; 
+}
+
+.order .container{
+  max-width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container{
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+}
+
+.order-header h1{
+  text-align: center;
+}
+
+.order-header{
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+}
+
+.oreder-fullPrice{
+  border: 1px solid #c7c7c7;
+}
+.btn-order{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.inp{
+  border-radius: 4px;
+}
+.btn-ord{
+  border:none;
+  cursor:pointer;
+}
