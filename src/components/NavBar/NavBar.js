@@ -4,8 +4,8 @@ import './NavBar.css'
  
 class NavBar extends React.Component {
   
-  handleCLick = (item) => {
-    this.props.history.push(`/order/${item}`)
+  goTo = (str) => {
+    this.props.history.push(str)
   }
 
   render() {
@@ -13,10 +13,14 @@ class NavBar extends React.Component {
     return (
     <>
     <div className="nav">
-        <p className="navImg1"></p>
-        <span className="zag">Sep.kg</span>
-        <div className="navImg" onClick={handleCLick}/>
-        <span className="predl">Собери свой сеп</span>
+      <button className="nav-home" onClick={()=>this.goTo('/')}>Logo</button>
+      
+      <div>
+        <button className="nav-goods" onClick={()=>this.goTo('/goods')}>Каталог</button>
+        <button className="nav-about" onClick={()=>this.goTo('/about')}>о нас</button>
+        <button className="nav-order" onClick={()=>this.goTo('/order')}>Сундук</button>
+      </div>
+
     </div>
     </>  
     );
