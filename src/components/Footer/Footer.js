@@ -8,7 +8,7 @@ class Footer extends React.Component{
             <div className="footer">
                 <div className="footerLeft">
                 <p className="desc1">Наш адрес: <br/>lorem ipsum</p>
-                <p className="desc2">Наш телефон: <br/>02325656235</p>
+                <p className="desc2">Наш телефон: <br/><a href="tel:+996700402161">+996700402161</a></p>
                 </div>  
                 <div className="footerRight">
                 <div className="desc3">
