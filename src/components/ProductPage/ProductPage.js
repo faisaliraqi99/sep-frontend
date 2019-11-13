@@ -17,26 +17,26 @@ class ProductPage extends Component {
               
                 <h1 className='title' > {data.name} </h1>
                 
-                <div className='productImg' style={{backgroundImage: `url(http://localhost:3000/img/${data.img})`}}/>
-                
-                <div className='productContent'>
-                    <div className='productDesc'>
-                        <div className='productTitle'></div>
-                        <h2>  Описание  </h2>
-                        <span className='productDescText'>
-                            {data.description}
-                        </span>
-                    </div>
-                  
-                    <div className='productOpt'>
-                        <h2> Характеристика </h2>
-                        <span className='productOptText'>
-                            {data.options}
-                        </span>
-                        <div className="pronuctFooter">
-                            <span>{data.price}</span>
-                            <button className="toChestBtn" onClick={this.handleAdd}>добавить в сундук</button>
+                <div className="productBody">
+                    <img alt={data.img} className='product-img' src={`http://localhost:8000/img/${data.img}`}/>
+                    <div className='productContent'>
+                        
+                        <div className='productDesc'>
+                            <div className='productTitle'></div>
+                            <h2>  Описание  </h2>
+                            <span className='productDescText'>
+                                {data.description}
+                            </span>
                         </div>
+                        
+                        <div className='productOpt'>
+                            <h2> Характеристика </h2>
+                            <span className='productOptText'>
+                                {data.options}
+                            </span>
+                        </div>
+                        <span>{data.price}</span>
+                        <button className="toChestBtn" onClick={this.handleAdd}>добавить в сундук</button>
                     </div>
                 </div>
             </div>
