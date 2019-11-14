@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { connect } from 'react-redux';
 
+import svg from '../Order/img/1.svg'
 import './Order.css';
 import { 
   inputName, 
@@ -43,8 +44,8 @@ class Order extends Component {
       <>
       <div className="order">
         <div className="container">
+            <caption className="vashZakaz"> Ваш заказ:</caption>
           <table>
-            <caption> Ваш заказ:</caption>
             <thead>
               <tr>
                 <th>Товар:</th>
@@ -62,18 +63,23 @@ class Order extends Component {
                   <tr key={index} className="order-item">
                         <td>{item.name}</td>
                         <td>{item.price}</td>
-                        <td>
+                        <td className="item-num">
                           <button onClick={()=>this.decrementItem(index)}>&lt;</button>
                             {item.num}
                           <button onClick={()=>this.incrementItem(index)}>&gt;</button>
                         </td>
                         <td>{item.price*item.num}</td>
-                        <td><button onClick={()=>this.deleteOrderItem(index)}>X</button></td>
+                        <td><button className="btn-X" onClick={()=>this.deleteOrderItem(index)}>
+                          <img src={svg} alt="close" width="25" height="25" />  
+                        </button></td>
                   </tr>
                 )
               })}
             </tbody>
 
+          </table>
+          <div className="btn-order">
+            <div className="fullPrice"> 
             <tfoot>
               <tr>
                 <th>
@@ -81,8 +87,7 @@ class Order extends Component {
                 </th>
               </tr>
             </tfoot>
-          </table>
-          <div className="btn-order">
+            </div>
             <input onInput={this.inputName} className="inp" placeholder="Введите имя"/>
             <input onInput={this.inputPhone} className="inp" placeholder="Введите номер"/>
             <button onClick={this.enterOrder} className="btn-ord">Оформить заказ</button>
