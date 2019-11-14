@@ -7,25 +7,25 @@ body {
     text-align: center;
     flex-wrap: wrap;
     width: 80%;
-    padding: 10px 20px;
+    padding: 10px 0 0 0;
 }
 
 .good {
     display: flex;
-    border: 1px solid black;
-    width: 200px;
-    margin: 0 0 40px 0;
-    color: #fff;
-    background-color: rgba(0,0,0, .2);
     flex-direction: column;
-    justify-content: center;
+    width: 200px;
+    height: 245px;
+    margin: 0 0 0 0;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     padding: 1rem;
     border-radius: 10px;
 }
 .item-img {
     width: 180px;
+    cursor: pointer;
     background-image: url(/static/media/shyrdak.c71ec315.jpeg);
     height: 160px;
     display: inline-block;
@@ -48,15 +48,14 @@ body {
     display: flex;
     justify-content: center;
     width: 20%;
-    padding: 10px 20px;
+    padding: 10px 0 0 0;
     text-align: center;
 }
 
 .goods-sidebar .category-item {
     width: 65%;
     cursor: pointer;
-    background-color: gray;
-    color: white;
+    color: black;
 }
 
 .goods-sidebar .sunduki {
@@ -74,10 +73,44 @@ body {
 .goods {
     display: flex;
     width: 100%;
-    padding: 10px;
+    padding: 20px 0 0 0;
     box-sizing: border-box;
 }
 
 .item-desc {
-    text-align: center;
+    text-align: start;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item-price {
+    font-size: 13px;
+    font-weight: 1000;
+}
+.category-item:hover {
+    background: green;
+    transition: 1s;
+}
+.toStoreBtn {
+    position: absolute;
+    right: 30px;
+    border: none;
+    background-color: inherit;
+    bottom: 20px;
+    padding: .5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./img/shopping-cart.png);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.category-item {
+    background: white;
+    padding: 10px 1px;
+    border: 1px solid #c7c7c7;
+    margin: 0 0 3px 0;
+    border-radius: 0;
 }
