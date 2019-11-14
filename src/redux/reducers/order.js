@@ -2,15 +2,7 @@
 const initialState = {
     name: '',
     phone: '',
-    goods: [
-        {
-            _id: 'SUPERUNIQID',
-            name: 'ШЫРДАК',
-            description: 'Лучший из лучших',
-            price: 100,
-            category: 'SHYRDAK'
-        }
-    ]
+    goods: []
 }
 
 export default (state = initialState, action) => {
@@ -25,6 +17,9 @@ export default (state = initialState, action) => {
             ...state,
             phone:action.payload
         };
+        case 'INCREMENT_ITEM':return action.payload;
+        case 'DECREMENT_ITEM':return action.payload;
+        case 'DELETE_ORDER_ITEM':return action.payload;
         default: return state;
     }
 }

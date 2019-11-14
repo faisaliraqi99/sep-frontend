@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import CategoryList from '../CategoryList/CategoryList';
 import './Home.css';
-import GoodsList from '../Goods/GoodsList';
 
 class Home extends Component {
   previewDisabled = ()=>{
@@ -12,7 +10,7 @@ class Home extends Component {
   render() {
     return (
     <>
-      <div onClick={this.previewDisabled} className='preview preview-disabled'>
+      <div onClick={this.previewDisabled} className='preview'>
         <div className="preview-content">
           Добро пожаловать
         </div>

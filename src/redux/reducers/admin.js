@@ -2,9 +2,6 @@ const initialState = [
   {
     name:'',
     phone:'',
-    order:{
-
-    },
     goods: []
   }
 ]
