@@ -1,23 +1,38 @@
+
+
 .title {
-    text-align: center; 
-    color: rgba(206, 180, 33, 0.582);
-    font-weight: bolder;
+    color: #8f2626;
+    font-size: 3.2em;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
-    margin-top: 80px;
+    letter-spacing: .05em;
+    text-align: end; 
 }
 
-
 .product-img {
-    height: 70vh;
+    width: 25rem;
+    padding-left: 86px;
+}
+
+.product-title {
+    color: #8f2626;
+    text-transform: uppercase;
+    text-emphasis: 0;
 }
 
 .productDesc {
-    text-align: center;
+    font-family: 'ZCOOL', sans-serif;
+    color: darkred;
+    margin-left: 20px;
 }
 
 .productOpt {
-    text-align: center;
+    font-family: 'ZCOOL', sans-serif;
+    color: darkred;
+    margin-left: 20px;
 }
+
 
 .productBody{
     display: flex;
@@ -27,8 +42,37 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 50%; */
+    background-color: burlywood;
+    margin-bottom: 3px;
 }
 .product-page {
     padding: 5rem 0px;
+    display: flex;
+    background-color: white;
+}
+
+.toChestBtn {
+    width: 100px;
+    height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    padding: 0 7px;
+    background-color: darkred;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.productPrice {
+    text-align: center;
+    color: darkred;
+
+}
+
+span.productPrice::BEFORE {
+    content: '$';
+    color: darkred;
 }
