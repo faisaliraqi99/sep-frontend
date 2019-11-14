@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { addToOrder } from '../../redux/actions/order'
 
 class GoodsList extends Component {
   handleClick = (id) => {
     this.props.history.push(`/goods/${id}`)
+  }
+
+  handleAdd = (e, item) => {
+    e.stopPropagation();
+    this.props.dispatch(addToOrder(this.props.order, item))
   }
   render() {
     const goods = this.props.goods;
@@ -12,17 +18,18 @@ class GoodsList extends Component {
     return (
       <>
         {goods.map((item, index) => (
-          <div className="good"  onClick={() => this.handleClick(item._id)} key={item._id}>
-            <img alt={"item-img" + index} className="item-img" src={`http://localhost:8000/img/${item.img}`}></img>
+          <div className="good" key={item._id}>
+            <img onClick={() => this.handleClick(item._id)} alt={"item-img" + index} className="item-img" src={`http://localhost:8000/img/${item.img}`}></img>
             <div className="item-desc">
-              <h3 className="item-goods">
+              <span className="item-goods">
                 {item.name}
-              </h3>
+              </span><br/>
               
               <span className="item-price">
                 {item.price}
               </span>
             </div>
+            <button onClick={(e)=>this.handleAdd(e, item)} className="toStoreBtn"></button>
           </div>
         ))}
       </>
@@ -32,7 +39,8 @@ class GoodsList extends Component {
 
 const mapStateToProps = state => {
   return {
-    goods: state.goods
+    goods: state.goods,
+    order: state.order
   }
 }
 
