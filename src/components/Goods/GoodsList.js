@@ -32,7 +32,7 @@ class GoodsList extends Component {
 
 const mapStateToProps = state => {
   return {
-    goods: state.goods.all
+    goods: state.goods
   }
 }
 

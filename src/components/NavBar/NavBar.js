@@ -9,11 +9,10 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const handleCLick = this.props.handleCLick;
     return (
     <>
     <div className="nav">
-      <button className="nav-home" onClick={()=>this.goTo('/')}>Logo</button>
+      <h2 className="nav-home" onClick={()=>this.goTo('/')}>Logo</h2>
       
       <div>
         <button className="nav-goods" onClick={()=>this.goTo('/goods')}>Каталог</button>

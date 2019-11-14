@@ -7,6 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border: none;
 }
 .home{
   background: #97949470;
@@ -16,6 +17,7 @@
 
 .preview {
   position: fixed;
+  z-index: 100;
   top: 0;
   bottom: 0;
   left: 0;

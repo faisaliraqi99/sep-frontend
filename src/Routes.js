@@ -12,7 +12,6 @@ import Footer from './components/Footer/Footer';
 
 class Routes extends React.Component {
   render() {
-    const allGoods = this.props.allGoods;
     return (
       <Router>
         <NavBar />
@@ -20,7 +19,7 @@ class Routes extends React.Component {
           <Route exact path="/admin" component={Admin} />
           <Route exact path="/goods" component={Goods} />
           <Route exact path="/order" component={Order} />
-          {allGoods.map(item => (
+          {this.props.allGoods.map(item => (
             <Route key={item._id} exact path={`/goods/${item._id}`} >
               <ProductPage
                 data={item}
@@ -34,9 +33,8 @@ class Routes extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.goods.all)
   return {
-    allGoods: state.goods.all
+    allGoods: state.goods
   }
 }
 

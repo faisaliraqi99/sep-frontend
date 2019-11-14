@@ -3,7 +3,14 @@ import Axios from 'axios';
 import { connect } from 'react-redux';
 
 import './Order.css';
-import { inputName, inputPhone, getOrder } from '../../redux/actions/order';
+import { 
+  inputName, 
+  inputPhone, 
+  getOrder, 
+  incrementItem,
+  decrementItem,
+  deleteOrderItem
+} from '../../redux/actions/order';
 
 class Order extends Component {
   getOrder = () =>{
@@ -21,39 +28,64 @@ class Order extends Component {
   componentDidMount(){
     this.getOrder();
   }
+  incrementItem = (i)=>{
+    this.props.dispatch(incrementItem(this.props.order, i))
+  }
+  decrementItem = (i)=>{
+    this.props.dispatch(decrementItem(this.props.order, i))
+  }
+  deleteOrderItem = (i)=>{
+    this.props.dispatch(deleteOrderItem(this.props.order, i))
+  }
   render() {
     let fullPrice = 0;
     return (
       <>
       <div className="order">
         <div className="container">
-          <div className="order-header">
-            <h1>Ваш заказ:</h1>
-          </div>
-          <ul>
-            {this.props.order.goods.map((item, index)=>{
-                fullPrice+=+item.price;
-              return(
-                <li key={index} className="order-item">
-                    <div>Товар- 
-                      <span>{item.name}</span><br/>
-                    </div>
-                    <div>Цена-
-                      <span>{item.price}</span>
-                    </div>
-                </li>
-              )
-            })}
-          </ul>
-          <div className="oreder-fullPrice">
-            <div>Всего:
-            {fullPrice}
-            </div>
+          <table>
+            <caption> Ваш заказ:</caption>
+            <thead>
+              <tr>
+                <th>Товар:</th>
+                <th>Цена</th>
+                <th>Кол-во:</th>
+                <th>Всего:</th>
+                <th></th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              {this.props.order.goods.map((item, index)=>{
+                  fullPrice+=item.num*item.price;
+                return(
+                  <tr key={index} className="order-item">
+                        <td>{item.name}</td>
+                        <td>{item.price}</td>
+                        <td>
+                          <button onClick={()=>this.decrementItem(index)}>&lt;</button>
+                            {item.num}
+                          <button onClick={()=>this.incrementItem(index)}>&gt;</button>
+                        </td>
+                        <td>{item.price*item.num}</td>
+                        <td><button onClick={()=>this.deleteOrderItem(index)}>X</button></td>
+                  </tr>
+                )
+              })}
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <th>
+                  Всего:{fullPrice}
+                </th>
+              </tr>
+            </tfoot>
+          </table>
           <div className="btn-order">
             <input onInput={this.inputName} className="inp" placeholder="Введите имя"/>
             <input onInput={this.inputPhone} className="inp" placeholder="Введите номер"/>
             <button onClick={this.enterOrder} className="btn-ord">Оформить заказ</button>
-          </div>  
           </div>
         </div>
       </div>
