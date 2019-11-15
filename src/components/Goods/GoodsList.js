@@ -19,17 +19,20 @@ class GoodsList extends Component {
       <>
         {goods.map((item, index) => (
           <div className="good" key={item._id}>
-            <img onClick={() => this.handleClick(item._id)} alt={"item-img" + index} className="item-img" src={`http://localhost:8000/img/${item.img}`}></img>
-            <div className="item-desc">
+            <div className="goodImgContainer">
+              <img alt={"item-img" + index} className="item-img" src={`http://localhost:8000/img/${item.img}`}></img>
               <span className="item-goods">
-                {item.name}
-              </span><br/>
-              
-              <span className="item-price">
-                {item.price}
+                <span className="item-goods-text">{item.name}</span>
+                
+                <div className="item-desc">
+                  <span className="item-price">
+                    {item.price} сом
+                  </span>
+                  <button onClick={() => this.handleClick(item._id)} className="item-button">Подробнее</button>
+                </div>
+                
               </span>
             </div>
-            <button onClick={(e)=>this.handleAdd(e, item)} className="toStoreBtn"></button>
           </div>
         ))}
       </>

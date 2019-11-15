@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 245px;
     margin: 0 0 0 0;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -78,34 +77,26 @@ body {
 }
 
 .item-desc {
-    text-align: start;
+    text-align: center;
     width: 90%;
     height: 30%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    transform: translate(0, 110px);
+    transition: 0.5s;
+
+    align-items: center;
     justify-content: space-between;
+    height: 3.5rem;
 }
 .item-price {
     font-size: 13px;
     font-weight: 1000;
 }
-.category-item:hover {
-    background: green;
-    transition: 1s;
-}
-.toStoreBtn {
-    position: absolute;
-    right: 30px;
-    border: none;
-    background-color: inherit;
-    bottom: 20px;
-    padding: .5rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(./img/shopping-cart.png);
-    z-index: 1;
-    cursor: pointer;
-}
+
 
 .category-item {
     background: white;
@@ -113,4 +104,49 @@ body {
     border: 1px solid #c7c7c7;
     margin: 0 0 3px 0;
     border-radius: 0;
+}
+
+.item-img {
+    transition: 0.5s;
+}
+.good:hover .item-img {
+    transform: scale(1.1);
+}
+
+.goodImgContainer {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+.item-goods{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000009c;
+}
+.item-goods-text{
+    transition: 0.5s;
+}
+.goodImgContainer:hover .item-goods-text{
+    transform: translate(0, -25px);
+}
+.goodImgContainer:hover .item-desc{
+    transform: translate(0, 30px);
+}
+
+.item-button {
+    border: 1px solid;
+    cursor: pointer;
+    background: none;
+    color: white;
+    padding: 5px 20px;
+}
+
+.goodImgContainer:hover .item-goods {
+    background: #5a000094;
 }
