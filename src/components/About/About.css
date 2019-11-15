@@ -1,31 +1,39 @@
-.About{
+.about .container{
+  max-width: 100%;
+  border: none;
+}
+.about{
+  background: #f0f0f0;
   display: flex;
-  padding: 4% 13%;
-  justify-content: space-between;
 }
-.zag{
+
+.about-header{
+  margin: 0 auto;
+  height: 95vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 50px 0 50px 0;
-  font-size: 40px;
+  align-items: center;
+  overflow: hidden;
 }
-.parag{
-  font-size: 30px;
+
+.about-header-img{
+  height: 105%;
+  width: 1300px;
 }
-.right{
-  padding: 0 110px 0 0;
-  font-size: 20px;
+.about-header-card {
+  width: 100vw;
+  transform: rotateZ(-70deg);
+  background-color: white;
+  height: 90vw;
+  overflow: hidden;
 }
-.left{
-  padding: 0 100px 0 0px;  
+
+.about-header-body {
+  transform: translate(-26%, 13%);
 }
-.pred{
-  font-size: 20px;
-}
-.imgTR{
-  padding: 50px 0px 0 0px;
-}
-.pngTR{
-  border:none;
-  background: inherit;
+
+.about-header-text {
+  position: absolute;
+  right: 0;
+  width: 37%;
 }

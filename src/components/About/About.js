@@ -1,37 +1,32 @@
 import React from 'react';
 
 import jpg from '../About/img/s.jpg'
-import png from '../About/img/4.png'
 import './About.css';
 
 class About extends React.Component{
   render(){
     return (
       <>
-      <p className="zag">О нас
-      <img className="pngTR" src={png}  width="50" height="50"/>
-      </p>
-    <div className="About">
-      <div className="left">
-        <p className="pred">
-            Сегодня в кыргызском обществе идет активный процесс переосмысления роли и значения культуры, в частности традиций и обычаев как ее составной части.
-            Это, прежде всего, связано со стремлением сохранить наиболее лучшие стороны своего культурного наследия. При сохранении национальной самобытности и поиска своего места в мировом сообществе кыргызы, как известно, всегда придавали большое значение семейно-бытовой сфере жизнедеятельности.
-            В течение столетий сложился целый комплекс традиций, обычаев и обрядов, регламентирующих взаимоотношения между различными социальными группами, народами. 
-            А так же внутри семьи – между мужем и женой, свекровью и невестой, родителями и детьми и т.д.
-            Эти нормативные действия передавались из поколения в поколение.
-        </p>
-    </div>
-    <div className="right">
-        <p className="parag">
-          Наша задача эти традиции сохранить
-          <p>Переходи в каталог</p>
-          <p>Собери свой сеп в несколько кликов</p> 
-        </p>
-          <img className="imgTR" src={jpg} width="550" height="350" />
-      
-    </div>
-    </div>
-    </>
-    )}
-}
+        <div className="about">
+          <div className="container">
+            <div className="about-header">
+              <img className="about-header-img" src={jpg} alt="header"></img>
+              <div className="about-header-body">
+                <div className="about-header-card">
+                </div>
+              </div>
+                  <div className="about-header-text">
+
+                    <h2>What is Lorem Ipsum?</h2>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                  </div>
+            </div>
+          </div>
+        </div>
+      </>
+      );
+    }
+  }
+  
 export default About
