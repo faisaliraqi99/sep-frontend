@@ -17,11 +17,11 @@
 }
 
 .about-header-img{
-  height: 105%;
+  height: 110%;
   width: 1300px;
 }
 .about-header-card {
-  width: 100vw;
+  width: 145vw;
   transform: rotateZ(-70deg);
   background-color: white;
   height: 90vw;
@@ -36,4 +36,5 @@
   position: absolute;
   right: 0;
   width: 37%;
+  height: 75%;
 }
