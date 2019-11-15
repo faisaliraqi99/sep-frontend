@@ -32,8 +32,10 @@ class Order extends Component {
   incrementItem = (i)=>{
     this.props.dispatch(incrementItem(this.props.order, i))
   }
-  decrementItem = (i)=>{
-    this.props.dispatch(decrementItem(this.props.order, i))
+  decrementItem = (i, item, e)=>{
+    if(item.num > 1){
+      this.props.dispatch(decrementItem(this.props.order, i))
+    }
   }
   deleteOrderItem = (i)=>{
     this.props.dispatch(deleteOrderItem(this.props.order, i))
@@ -44,11 +46,12 @@ class Order extends Component {
       <>
       <div className="order">
         <div className="container">
-            <caption className="vashZakaz"> Ваш заказ:</caption>
           <table>
+            <caption className="vashZakaz"> Ваш заказ:</caption>
             <thead>
               <tr>
                 <th>Товар:</th>
+                
                 <th>Цена</th>
                 <th>Кол-во:</th>
                 <th>Всего:</th>
@@ -62,13 +65,13 @@ class Order extends Component {
                 return(
                   <tr key={index} className="order-item">
                         <td>{item.name}</td>
-                        <td>{item.price}</td>
+                        <td>{item.price} сом</td>
                         <td className="item-num">
-                          <button onClick={()=>this.decrementItem(index)}>&lt;</button>
+                          <button onClick={(e)=>this.decrementItem(index, item, e)}>&lt;</button>
                             {item.num}
-                          <button onClick={()=>this.incrementItem(index)}>&gt;</button>
+                          <button onClick={(e)=>this.incrementItem(index, item, e)}>&gt;</button>
                         </td>
-                        <td>{item.price*item.num}</td>
+                        <td>{item.price*item.num} сом</td>
                         <td><button className="btn-X" onClick={()=>this.deleteOrderItem(index)}>
                           <img src={svg} alt="close" width="25" height="25" />  
                         </button></td>
@@ -80,13 +83,7 @@ class Order extends Component {
           </table>
           <div className="btn-order">
             <div className="fullPrice"> 
-            <tfoot>
-              <tr>
-                <th>
-                  Всего:{fullPrice}
-                </th>
-              </tr>
-            </tfoot>
+                  Всего:{fullPrice} сом
             </div>
             <input onInput={this.inputName} className="inp" placeholder="Введите имя"/>
             <input onInput={this.inputPhone} className="inp" placeholder="Введите номер"/>

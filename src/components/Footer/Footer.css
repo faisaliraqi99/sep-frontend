@@ -2,15 +2,18 @@
     display: flex;
     padding: 2% 13%;
     justify-content: space-between;
-    background: #00000070;
+    background: #5a5a5a;
     color: rgba(255, 255, 255, 0.945);
+}
+.footerRight, .footerLeft{
+    width: 60%;
 }
 .desc1{
     display: flex;
     flex-wrap: wrap;
 
 }
-.footerRight, .footerLeft{
-    width: 60%;
+.desc2 a {
+    color: #232323;
+    font-weight: 500;
 }
-  

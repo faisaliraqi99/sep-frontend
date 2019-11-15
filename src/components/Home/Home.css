@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .home .container{
-  width: 100%;
-  margin: 0;
-  padding: 24px 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 100%;
   border: none;
 }
 .home{
-  background: #97949470;
-  min-height: 100vh;
+  background: #f0f0f0;
   display: flex;
 }
 
@@ -41,4 +35,68 @@
 .preview-disabled{
   transition: 0.5s;
   transform: translateY(-100%);
+}
+
+.home-header{
+  margin: 0 auto;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-header-img{
+  width: 80%;
+}
+.home-header-card {
+  width: 100vw;
+  transform: rotateZ(-70deg);
+  background-color: white;
+  height: 90vw;
+  overflow: hidden;
+}
+
+.home-header-body {
+  transform: translate(-26%, 13%);
+}
+
+.home-header-logo{
+  position: absolute;
+  top: -70%;
+  right: 50%;
+  background-image: url(../img/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 220px;
+  height: 100px;
+}
+
+.home-header-text {
+  position: absolute;
+  right: 0;
+  width: 37%;
+}
+button.headerBtn {
+  position: absolute;
+  right: 21%;
+  bottom: -54%;
+  font-size: 18px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  background: #232323;
+  color: white;
+}
+.headerBtn-blink {
+  position: absolute;
+  transition: 1s;
+  background: white;
+  width: 20px;
+  height: 200px;
+  transform: translate(-136px, -87px) rotateZ(45deg);
+}
+.headerBtn:hover .headerBtn-blink {
+  transform: translate(300px, -87px) rotateZ(45deg);
 }
