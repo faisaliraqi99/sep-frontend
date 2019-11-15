@@ -1,0 +1,31 @@
+.About{
+  display: flex;
+  padding: 4% 13%;
+  justify-content: space-between;
+}
+.zag{
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  font-size: 40px;
+}
+.parag{
+  font-size: 30px;
+}
+.right{
+  padding: 0 110px 0 0;
+  font-size: 20px;
+}
+.left{
+  padding: 0 100px 0 0px;  
+}
+.pred{
+  font-size: 20px;
+}
+.imgTR{
+  padding: 50px 0px 0 0px;
+}
+.pngTR{
+  border:none;
+  background: inherit;
+}
