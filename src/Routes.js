@@ -9,6 +9,7 @@ import Admin from './components/Admin/Admin';
 import Order from './components/Order/Order';
 import ProductPage from './components/ProductPage/ProductPage';
 import Footer from './components/Footer/Footer';
+import About from './components/About/About';
 
 class Routes extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class Routes extends React.Component {
           <Route exact path="/admin" component={Admin} />
           <Route exact path="/goods" component={Goods} />
           <Route exact path="/order" component={Order} />
+          <Route exact path="/about" component={About} />
           {this.props.allGoods.map(item => (
             <Route key={item._id} exact path={`/goods/${item._id}`} >
               <ProductPage
