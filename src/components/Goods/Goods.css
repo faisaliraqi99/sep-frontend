@@ -13,7 +13,7 @@ body {
 .good {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 175px;
     margin: 0 0 0 0;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -131,6 +131,8 @@ body {
 }
 .item-goods-text{
     transition: 0.5s;
+    text-transform: uppercase;
+    font-family: sans-serif;
 }
 .goodImgContainer:hover .item-goods-text{
     transform: translate(0, -25px);
