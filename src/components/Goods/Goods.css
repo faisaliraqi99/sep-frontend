@@ -74,6 +74,7 @@ body {
     width: 100%;
     padding: 20px 0 0 0;
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 .item-desc {
@@ -150,5 +151,5 @@ body {
 }
 
 .goodImgContainer:hover .item-goods {
-    background: #5a000094;
+    background: #ffffff34;
 }
