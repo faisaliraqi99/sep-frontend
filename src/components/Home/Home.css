@@ -44,14 +44,15 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .home-header-img{
-  width: 80%;
+  max-width: 70%;
 }
 .home-header-card {
-  width: 100vw;
-  transform: rotateZ(-70deg);
+  width: 145vw;
+  transform: translateX(-5%) rotateZ(-70deg);
   background-color: white;
   height: 90vw;
   overflow: hidden;
@@ -62,25 +63,23 @@
 }
 
 .home-header-logo{
-  position: absolute;
-  top: -70%;
-  right: 50%;
   background-image: url(../img/logo.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 220px;
   height: 100px;
+  margin: 0 auto;
 }
 
 .home-header-text {
   position: absolute;
   right: 0;
+  top: 10px;
   width: 37%;
 }
 button.headerBtn {
-  position: absolute;
-  right: 21%;
-  bottom: -54%;
+  display: block;
+  margin: 20px auto;
   font-size: 18px;
   padding: 1rem 3rem;
   cursor: pointer;

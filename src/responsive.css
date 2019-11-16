@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+  .goods {
+    flex-direction: column;
+  }
+
+  .goods-sidebar {
+    width: 100% !important;
+  }
+
+  .goods-list {
+    width: 100% !important;
+  }
+}
