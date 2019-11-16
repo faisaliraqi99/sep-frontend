@@ -14,11 +14,15 @@ class NavBar extends React.Component {
     return (
     <>
     <div className="nav">
-      <h2 className="nav-home" onClick={()=>this.goTo('/')}>Logo</h2>
+      <div className="logo">
+        <div className="logoImg"></div>
+      </div>
+      <h2 className="nav-home" onClick={()=>this.goTo('/')}>СЕП</h2>
       
       <div>
+        <button className="nav-domoi" onClick={()=>this.goTo('/')}>Домой</button>
         <button className="nav-goods" onClick={()=>this.goTo('/goods')}>Каталог</button>
-        <button className="nav-about" onClick={()=>this.goTo('/about')}>о нас</button>
+        <button className="nav-about" onClick={()=>this.goTo('/about')}>О нас</button>
         <button className="nav-order" onClick={()=>this.goTo('/order')}>Сундук
           {notifs ?
             <span className="badge">{notifs}</span> : null
