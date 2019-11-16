@@ -107,3 +107,18 @@ h2.nav-home {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.nav-goods:hover .nav-goods-folder,.nav-goods:focus .nav-goods-folder{
+  padding-top: 2rem;
+  top: 100%;
+  left: 0;
+}
+.nav-goods-folder {
+  position: absolute;
+  background: #232323;
+  top: -1000px;
+}
+.nav-goods-folder a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
